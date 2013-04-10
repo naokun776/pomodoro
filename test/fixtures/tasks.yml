@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  taskName: MyString
+  taskStatus: 1
+  memo: MyString
+
+two:
+  taskName: MyString
+  taskStatus: 1
+  memo: MyString
