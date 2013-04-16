@@ -2,10 +2,24 @@
 
 <%= link_to 'New Task', new_task_path, :class => "btn btn-large" %>
 <%= link_to 'Update', new_task_path, :class => "btn btn-large" %>
-<%= link_to 'ADD', '/tasks/add', :class => "btn btn-large" %>
+<%= link_to 'ADD', {}, :class => "btn btn-large", :onClick => "$('#lightbox').lightbox_me();return false;" %>
+
+<%# lightbox表示用 %>
+<div id="lightbox" class="login-form" style="display:none;">
+  <%= form_for(@task) do |f| %>
+    <h4>INPUT TASK!!</h4>
+    <div class="field">
+      <%= f.text_field :taskName %>
+    </div>
+    <div>
+      <%= f.submit 'CREATE NEW TASK', :class => 'btn btn-primary btn-large' %>
+    </div>
+  <% end %>
+</div>
 
 <hr />
 
+<%# テーブル表示 %>
 <div class="todo mrm">
   <div class="">
     <ul>
@@ -32,7 +46,19 @@
       <% end %>
     </ul>
   </div>
+  <%#
+    <p align="center" data-toggle="tooltip" title="" data-original-title="Here is the sample of talltooltip that contains three lines or more. More."></p>
+  %>
 </div>
+
+<%# lightbox表示用 %>
+<%#
+<div id="lightbox" class="login-screen" style="display:none;">
+  <div id="lightbox" class="login-form" style="display:none;">
+    <input placeholder="TASK NAME">
+  </div>
+</div>
+%>
 
 <br />
 

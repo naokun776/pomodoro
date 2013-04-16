@@ -1,17 +1,19 @@
 // Some general UI pack related JS
-//= require FlatUI/bootstrap-tooltip.js
-//= require FlatUI/custom_checkbox_and
-//= require FlatUI/bootstrap-tooltip.js
-//= require FlatUI/custom_checkbox_and_radio.js
-//= require FlatUI/custom_radio.js
-//= require FlatUI/html5shiv.js
-//= require FlatUI/icon-font-ie7.js
+// *** インポートするJavascriptライブラリはここに書く。 ***
 //= require FlatUI/jquery-1.8.2.min.js
 //= require FlatUI/jquery-ui-1.10.0.custom.min.js
 //= require FlatUI/jquery.dropkick-1.0.0.js
 //= require FlatUI/jquery.placeholder.js
 //= require FlatUI/jquery.tagsinput.js
+//= require FlatUI/bootstrap-tooltip.js
+//= require FlatUI/bootstrap-tooltip.js
+//= require FlatUI/custom_checkbox_and_radio.js
+//= require FlatUI/custom_radio.js
+//= require FlatUI/html5shiv.js
+//= require FlatUI/icon-font-ie7.js
 //= require FlatUI/lte-ie7-24.js
+//= require lightbox/jquery.lightbox_me.js
+//= require_tree .
 
 
 $(function () {

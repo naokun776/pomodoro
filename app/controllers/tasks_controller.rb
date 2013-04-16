@@ -3,6 +3,7 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
     @tasks = Task.all
+    @task = Task.new
     @number = 0
 
     respond_to do |format|
@@ -45,7 +46,10 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to @task, :notice => 'Task was successfully created.' }
+        #format.html { redirect_to @task, :notice => 'Task was successfully created.' }
+        @tasks = Task.all
+        @number = 0
+        format.html { render :action => 'index' }
         format.json { render :json => @task, :status => :created, :location => @task }
       else
         format.html { render :action => "new" }
