@@ -40,7 +40,7 @@
             <input type="text" class="span3" style="margin-top:0px; margin-bottom:0px;" value="<%= task.taskName %>" />
             <%= link_to 'Show', task , {:class => "btn btn-large btn-info" } %>
             <%= link_to 'Edit', edit_task_path(task), {:class => "btn btn-large btn-info" } %>
-            <%= link_to 'Destroy', task, :class => "btn btn-large btn-danger", :method => :delete, :data => { :confirm => 'Are you sure?'} %>
+            <%= link_to 'Destroy', task, {:method => :delete,  :confirm => 'Are you sure?', :class => "btn btn-large btn-danger"} %>
           </div>
         </li>
       <% end %>
