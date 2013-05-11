@@ -1,7 +1,5 @@
-<h1>Listing tasks</h1>
+<h1>Task List</h1>
 
-<%= link_to 'New Task', new_task_path, :class => "btn btn-large" %>
-<%= link_to 'Update', new_task_path, :class => "btn btn-large" %>
 <%= link_to 'ADD', {}, :class => "btn btn-large", :onClick => "$('#lightbox').lightbox_me();return false;" %>
 
 <%# lightbox表示用 %>
@@ -9,7 +7,7 @@
   <%= form_for(@task) do |f| %>
     <h4>INPUT TASK!!</h4>
     <div class="field">
-      <%= f.text_field :taskName %>
+        <%= f.text_field :taskName, :replace_text => 'aaa'%>
     </div>
     <div>
       <%= f.submit 'CREATE NEW TASK', :class => 'btn btn-primary btn-large' %>
@@ -37,6 +35,7 @@
             <span class="todo-name" style="margin-right:10px" >
               <%= @number += 1%>
             </span>
+
             <input type="text" class="span3" style="margin-top:0px; margin-bottom:0px;" value="<%= task.taskName %>" />
             <%= link_to 'Show', task , {:class => "btn btn-large btn-info" } %>
             <%= link_to 'Edit', edit_task_path(task), {:class => "btn btn-large btn-info" } %>

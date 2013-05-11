@@ -1,7 +1,7 @@
 // Some general UI pack related JS
 // *** インポートするJavascriptライブラリはここに書く。 ***
 //= require FlatUI/jquery-1.8.2.min.js
-//= require rails.js
+//= require jquery_ujs
 //= require FlatUI/jquery-ui-1.10.0.custom.min.js
 //= require FlatUI/jquery.dropkick-1.0.0.js
 //= require FlatUI/jquery.placeholder.js
