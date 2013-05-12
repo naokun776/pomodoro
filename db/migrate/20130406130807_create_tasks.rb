@@ -4,6 +4,7 @@ class CreateTasks < ActiveRecord::Migration
       t.string :taskName
       t.integer :taskStatus
       t.string :memo
+      t.string :userId
 
       t.timestamps
     end
