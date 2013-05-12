@@ -49,7 +49,6 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        #format.html { redirect_to @task, :notice => 'Task was successfully created.' }
         @tasks = Task.all
         @number = 0
         format.html { render :action => 'index' }
@@ -69,8 +68,6 @@ class TasksController < ApplicationController
     respond_to do |format|
       if @task.update_attributes(params[:task])
         format.html { redirect_to ({ :action => 'index'}), :notice => 'Task was successfully updated.' }
-        # format.html { redirect_to @task, :notice => 'Task was successfully updated.' }
-        # format.json { head :no_content }
       else
         format.html { render :action => "edit" }
         format.json { render :json => @task.errors, :status => :unprocessable_entity }
