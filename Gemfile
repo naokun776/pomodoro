@@ -8,7 +8,7 @@ gem 'rails', '3.2.12'
 gem 'sqlite3', :group => [:development, :test]
 group :production do
   gem 'pg'
-  end
+end
 
 gem 'json'
 
