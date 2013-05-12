@@ -1,4 +1,7 @@
 class TasksController < ApplicationController
+  before_filter :count
+  after_filter :count
+
   # GET /tasks
   # GET /tasks.json
   def index
@@ -82,7 +85,6 @@ class TasksController < ApplicationController
     @task.destroy
 
     respond_to do |format|
-      # format.html { redirect_to tasks_url }
       format.html { redirect_to :action => "index" }
       format.json { head :no_content }
     end
@@ -96,8 +98,15 @@ class TasksController < ApplicationController
     @number = 0
 
     respond_to do |format|
-      format.html { render :action => "index" }
+      format.html { redirect_to :action => "index" }
+      # format.html { render :action => "index" }
       format.json { head :no_content }
     end
+  end
+
+  # タスク数をカウントしてメニューバーに表示する。
+  private
+  def count
+      @taskCount = Task.all.size
   end
 end
